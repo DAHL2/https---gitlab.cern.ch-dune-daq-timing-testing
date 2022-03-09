@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<connections>
+  
+  <connection id="TEST_MST"          uri="ipbusudp-2.0://192.168.101.52:50001" address_table="file://${TIMING_SHARE}/config/etc/addrtab/v610/ouroboros_fmc/top.xml" />
+  <connection id="TEST_EPT"          uri="ipbusudp-2.0://192.168.200.21:50001" address_table="file:///${TIMING_SHARE}/config/etc/addrtab/v610/endpoint_fmc/top.xml" />
+
+  <!-- Tunnels -->
+  <connection id="PRIMARY_TUN"       uri="chtcp-2.0://localhost:60708?target=192.168.200.16:50001" address_table="file:///${TIMING_SHARE}/config/etc/addrtab/v610/ouroboros_fmc/top.xml" />  
+  <connection id="SECONDARY_TUN"     uri="chtcp-2.0://localhost:60708?target=192.168.200.17:50001" address_table="file:///${TIMING_SHARE}/config/etc/addrtab/v610/ouroboros_fmc/top.xml" />    
+  <connection id="TERTIARY_TUN"      uri="chtcp-2.0://localhost:60708?target=192.168.200.32:50001" address_table="file:///${TIMING_SHARE}/config/etc/addrtab/v610/ouroboros_pc059/top_pc059.xml" />    
+
+  <connection id="SECONDARY_EPT_TUN" uri="chtcp-2.0://localhost:60708?target=192.168.200.21:50001" address_table="file:///${TIMING_SHARE}/config/etc/addrtab/v610/endpoint_fmc/top.xml" />    
+  <connection id="TERTIARY_FO_TUN"   uri="chtcp-2.0://localhost:60708?target=192.168.200.32:50001" address_table="file:///${TIMING_SHARE}/config/etc/addrtab/v610/fanout_pc059/top.xml" />    
+  <connection id="CRT_EPT_TUN"       uri="chtcp-2.0://localhost:60708?target=192.168.200.16:50001" address_table="file:///${TIMING_SHARE}/config/etc/addrtab/v610/crt_fmc/top.xml" />  
+ 
+  <connection id="OVLD_TUN"          uri="chtcp-2.0://localhost:60708?target=192.168.200.64:50001" address_table="file://${TIMING_SHARE}/config/etc/addrtab/v610/overlord_tlu/top_tlu.xml" />
+  <connection id="FO0_TUN"           uri="chtcp-2.0://localhost:60708?target=192.168.200.65:50001" address_table="file://${TIMING_SHARE}/config/etc/addrtab/v610/fanout_pc059/top.xml" />
+ 
+  <connection id="PROD_MASTER_TUN"   uri="chtcp-2.0://localhost:60708?target=192.168.200.64:50001" address_table="file://${TIMING_SHARE}/config/etc/addrtab/v610/overlord_tlu/top_tlu.xml" />
+  <connection id="PROD_FANOUT_0_TUN" uri="chtcp-2.0://localhost:60708?target=192.168.200.65:50001" address_table="file://${TIMING_SHARE}/config/etc/addrtab/v610/fanout_pc059/top.xml" />
+  <connection id="PROD_FANOUT_1_TUN" uri="chtcp-2.0://localhost:60708?target=192.168.200.66:50001" address_table="file://${TIMING_SHARE}/config/etc/addrtab/v610/fanout_pc059/top.xml" />
+  <connection id="PROD_FANOUT_2_TUN" uri="chtcp-2.0://localhost:60708?target=192.168.200.67:50001" address_table="file://${TIMING_SHARE}/config/etc/addrtab/v610/fanout_pc059/top.xml" />
+
+  <connection id="OVERLORD_FMC"      uri="ipbusudp-2.0://192.168.200.16:50001" address_table="file://${TIMING_SHARE}/config/etc/addrtab/v610/overlord_fmc/top_fmc.xml" />
+
+  <connection id="EPT_0"             uri="ipbusudp-2.0://192.168.200.16:50001" address_table="file://${TIMING_SHARE}/config/etc/addrtab/v610/endpoint_fmc/top.xml" />
+  <connection id="EPT_1"             uri="ipbusudp-2.0://192.168.200.17:50001" address_table="file://${TIMING_SHARE}/config/etc/addrtab/v610/endpoint_fmc/top.xml" />
+  <connection id="EPT_2"             uri="ipbusudp-2.0://192.168.200.18:50001" address_table="file://${TIMING_SHARE}/config/etc/addrtab/v610/endpoint_fmc/top.xml" />
+
+  <connection id="BOREAS_FMC"        uri="ipbusudp-2.0://192.168.200.16:50001" address_table="file://${TIMING_SHARE}/config/etc/addrtab/v610/boreas_fmc/top_fmc.xml" />
+  <connection id="BOREAS_FMC_WR"     uri="ipbusudp-2.0://10.11.34.119:50001" address_table="file://${TIMING_SHARE}/config/etc/addrtab/v610/boreas_fmc/top_fmc.xml" />  
+  <connection id="BOREAS_FMC_WR_CH"  uri="chtcp-2.0://np04-srv-012.cern.ch:10203?target=10.11.34.119:50001" address_table="file://${TIMING_SHARE}/config/etc/addrtab/v610/boreas_fmc/top_fmc.xml" />
+
+  <connection id="BOREAS_TLU"        uri="ipbusudp-2.0://192.168.200.64:50001" address_table="file://${TIMING_SHARE}/config/etc/addrtab/v610/boreas_tlu/top_tlu.xml" />
+
+  <connection id="SIM"                  uri="ipbusudp-2.0://192.168.201.16:50001" address_table="file://${TIMING_SHARE}/config/etc/addrtab/v610/ouroboros_sim/top_sim.xml" />
+  <connection id="SIM_UDP"              uri="ipbusudp-2.0://localhost:50010" address_table="file://${TIMING_SHARE}/config/etc/addrtab/v610/ouroboros_sim/top_sim.xml" />
+  <connection id="PROD_MASTER_ICEBERG"  uri="ipbusudp-2.0://192.168.121.10:50001" address_table="file://${TIMING_SHARE}/config/etc/addrtab/v610/overlord_tlu/top_tlu.xml" />
+
+  <connection id="OURO_FIB_ENC"         uri="ipbusudp-2.0://192.168.200.24:50001" address_table="file://${TIMING_SHARE}/config/etc/addrtab/v610/ouroboros_fib/top_fib.xml" />
+  <connection id="OURO_FIB_AFC"         uri="ipbusudp-2.0://192.168.121.100:50001" address_table="file://${TIMING_SHARE}/config/etc/addrtab/v610/ouroboros_fib/top_fib.xml" />
+  
+  <connection id="FAN_FIB_AFC"          uri="ipbusudp-2.0://192.168.121.100:50001" address_table="file://${TIMING_SHARE}/config/etc/addrtab/v610/fanout_fib/top_fib.xml" />
+  
+  <connection id="OURO_PC059"          uri="ipbusudp-2.0://192.168.200.65:50001" address_table="file://${TIMING_SHARE}/config/etc/addrtab/v610/ouroboros_pc059/top_pc059.xml" />
+
+  <connection id="CHRONOS_FMC"          uri="ipbusudp-2.0://192.168.200.16:50001" address_table="file://${TIMING_SHARE}/config/etc/addrtab/v610/chronos_fmc/top.xml" />
+  <connection id="CHRONOS_FMC_WR"       uri="ipbusudp-2.0://10.11.34.118:50001" address_table="file://${TIMING_SHARE}/config/etc/addrtab/v610/boreas_fmc/top_fmc.xml" />
+  <connection id="CHRONOS_FMC_WR_CH"    uri="chtcp-2.0://np04-srv-012.cern.ch:10203?target=10.11.34.118:50001" address_table="file://${TIMING_SHARE}/config/etc/addrtab/v610/boreas_fmc/top_fmc.xml" />
+
+</connections>
+    
